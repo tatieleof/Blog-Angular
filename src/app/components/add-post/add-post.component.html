@@ -1,0 +1,23 @@
+<div class="container">
+  <form (ngSubmit)="save(forma)" novalidate="" #forma="ngForm">
+    <div class="form-group row" >
+      <label>Title</label>
+      <input type="text" class="form-control" placeholder="" name="title" [ngModel] required #title="ngModel">
+      <div *ngIf="title.errors?.required">
+        
+      </div>
+      
+    </div>
+    <div class="form-group row">
+      <label>Description</label>
+      <input type="text" class="form-control" placeholder="" name="text" [ngModel] required #text="ngModel">
+      <div *ngIf="title.errors?.required">
+        
+      </div>
+    </div>
+    
+
+    <button class="btn btn-primary" type="submit">Add</button>
+  </form>
+
+</div>
